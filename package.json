@@ -1,0 +1,12 @@
+{
+  "name": "ts-addons",
+  "version": "1.0.0",
+  "description": "Runtime helpers and environment setup for TypeScript projects – bootstrap, env detection, polyfills",
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "keywords": ["typescript", "runtime", "helpers", "polyfill", "env", "bootstrap"],
+  "author": "Astrid Shindler <containers-orf@proton.me>",
+  "license": "MIT"
+}
