@@ -101,8 +101,6 @@ function resolveDefaults() {
     _resolve(automations_repo);
 }
 
-resolveDefaults();
-
 module.exports = {
     resolveDefaults,
     cleaningUp,
