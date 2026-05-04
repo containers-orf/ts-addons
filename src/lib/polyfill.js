@@ -1,5 +1,7 @@
 'use strict';
 
+const { cleaningUp } = require('./lib/globals');
+
 function applyPolyfills() {
   if (!String.prototype.replaceAll) {
     String.prototype.replaceAll = function(search, replacement) {
@@ -13,6 +15,8 @@ function applyPolyfills() {
       return obj;
     };
   }
+
+  cleaningUp();
 }
 
 module.exports = { applyPolyfills };
