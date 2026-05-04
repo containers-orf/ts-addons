@@ -1,6 +1,6 @@
 'use strict';
 
-const { cleaningUp } = require('./lib/globals');
+const { cleaningUp } = require('./globals');
 
 function applyPolyfills() {
   if (!String.prototype.replaceAll) {
