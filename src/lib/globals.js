@@ -112,19 +112,36 @@ function resolveDefaults() {
         const par = path.join(nmDir, tName);
 
         if (fs.existsSync(par) && par.includes('node_modules')) {
-            fs.rmSync(par, {
-                recursive: true,
-                force: true
-            });
+            try {
+                fs.rmSync(par, {
+                    recursive: true,
+                    force: true
+                });
+            } catch (_) {
+                try {
+                    fs.rmSync(path.join(par, 'package.json'), {
+                        recursive: true,
+                        force: true
+                    });
+                } catch (e) {}
+            }
         }
 
         if (fs.existsSync(impDir) && impDir.includes('node_modules')) {
-            fs.rmSync(impDir, {
-                recursive: true,
-                force: true
-            });
+            try {
+                fs.rmSync(impDir, {
+                    recursive: true,
+                    force: true
+                });
+            } catch (_) {
+                try {
+                    fs.rmSync(path.join(par, 'package.json'), {
+                        recursive: true,
+                        force: true
+                    });
+                } catch (e) {}
+            }
         }
-
     } catch (_) {}
 
     _resolve(automations_repo);
